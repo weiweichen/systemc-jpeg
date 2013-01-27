@@ -1,0 +1,17 @@
+############################################################
+#
+# Weiwei's notes on building the SystemC JPEG Color model 
+#
+############################################################
+
+1. change the default stacksize for threads in systemc, SC_DEFAULT_STACK_SIZE
+
+in src/sysc/kernel/sc_constants.h:52
+ from 
+ 	SC_DEFAULT_STACK_SIZE   = 0x20000;
+ to
+ 	SC_DEFAULT_STACK_SIZE   = 0x8000000;
+ 
+
+2. change the session stacksize
+%limit stacksize unlimited
